@@ -1,0 +1,53 @@
+<%= form_for (@player) do |f| %>
+
+  <% if @team.players.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@player.errors.count, "error") %> cannot add new player:
+      </h2>
+      <ul>
+        <% @team.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :'Name:' %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :'Position:' %><br>
+    <%= f.number_field :position %>
+  </p>
+  <p>
+    <%= f.label :'Number:' %><br>
+    <%= f.number_field :number %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+
+
+
+<%= form_for([@team, @team.players.build]) do |f| %>
+  <p>
+    <%= f.label :'Name:' %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :'Position:' %><br>
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :'Number:' %><br>
+    <%= f.text_field :number %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

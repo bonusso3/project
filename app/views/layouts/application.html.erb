@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<HEAD>
+	<TITLE>Note!</TITLE>
+	<!--style-->
+	<!--webfont-->
+	<title>MyFavoriteTeam</title>
+  	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  	<%= csrf_meta_tags %>
+  	
+
+</HEAD>
+<BODY>
+<!--header part starts -->
+	<div class="header">
+	</div>
+<!--header part ends -->
+<!--content part starts -->
+<div class="content">
+	<div id="left-content">
+			<div class="top-header">
+				<div class="logo">
+					<h1>Note!</h1>
+				</div>
+			</div>
+	</div>
+	<div id="right-content" class="menu">
+		<nav>
+			<div class="main-menu">
+				<% if signed_in? %>
+					<div class="signed">
+						Signed in as: <%= current_user.email %>
+					</div>
+					<div>
+						<%= link_to "My profile", posts_path %>
+					</div>
+					<div>
+						<%= link_to "New post", new_post_path %>
+					</div>
+					<div class="signed">
+        				<%= link_to 'Sign out', sign_out_path, method: :delete %>
+					</div>
+				<% else %>
+					<div>
+						 <%= link_to 'Sign in', sign_in_path %>
+					</div>
+				<% end %>
+					
+			</div>
+		</nav>
+		
+	</div>
+	<div id="right-content" class="content">
+
+    <%= yield %>
+	</div>
+</div>
+
+
+
+</BODY>
+
+</HTML> 

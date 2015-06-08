@@ -1,0 +1,257 @@
+@import url('//fonts.googleapis.com/css?family=Pacifico');
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 20px;
+	background-size: 20px 20px;
+	font-family: 'Pacifico', cursive;
+}
+
+.header{}
+
+
+
+#left-content {
+	width: 20%;
+    height: 100%;
+    position: fixed;
+    /*outline: rgb(155,155,155), inset, 1px, solid;*/
+	box-shadow: 0px 0px 30px black;
+	z-index: 1;
+		background-color: #383838;
+		
+	
+	
+
+}
+
+	.logo {
+		transform: rotate(270deg);
+		height: inherit;
+		width: 100%;
+		margin-top: 12em;
+	}
+
+		.logo h1{
+			text-decoration: none;
+			color: white;
+			font-family: 'Pacifico', cursive;
+			letter-spacing: 0.03em;
+			font-weight: 200;
+			font-size: 5em;
+			text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.88);
+
+			
+		}
+
+
+
+
+#right-content {
+	width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: #fff; 
+	background-image: 
+	linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+	linear-gradient(#eee .1em, transparent .1em);
+	background-size: 100% 1.2em;
+}
+
+	.main-menu {
+		position: fixed;
+		margin-right: 1em;
+		right: 0;
+		z-index: 1;
+	}
+
+	.main-menu div{
+		display: inline-block;
+		margin-left: 3px;
+		padding-right: 10px;
+		padding-left: 10px;
+		box-shadow: 0px 0px 10px black;
+		background-color: #383838;
+	}
+
+		.main-menu div a {
+			text-shadow: 0px 0px 4px rgba(50, 50, 50, 0.88);
+			font-family: 'Pacifico', cursive;
+			font-weight: 400;
+			color: white;
+		  	font-size: 1em;
+		  	line-height: 2em;
+			text-align: center;
+			text-decoration: none;
+		}
+		
+		
+		.signed {
+			display: inline-block;
+			padding-right: 10px;
+			padding-left: 10px;
+			box-shadow: 0px 0px 10px #888888;
+			background-color: #383838;
+			text-shadow: 0px 0px 4px rgba(50, 50, 50, 0.88);
+			font-family: 'Pacifico', cursive;
+			font-weight: 400;
+			color: white;
+		  	font-size: 1em;
+		  	line-height: 2em;
+			text-align: center;
+			text-decoration: none;
+		}
+		
+
+#right-content .content {
+	width: 100%;
+	position: relative;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 3em;
+}
+
+	.post {
+		width: 80%;
+		margin-top: 3em;
+		margin-bottom: 5em;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+
+	.heading {
+
+	}
+
+	.post .heading h1 {
+		display: inline-block;
+		text-decoration: none;
+		color: #C9271D;
+		font-family: 'Pacifico', cursive;
+		font-weight: 300;
+		font-size: 1.6em;
+		text-shadow: 1px 1px 0px  #B5231A;
+		letter-spacing: 0.02em;	
+		margin-left: 0em;
+	}
+	.post .heading h3 {
+				display: inline-block;
+				float: right;
+				text-decoration: none;
+				color: #C9271D;
+				font-family: 'Pacifico', cursive;
+				vertical-align: top;
+				font-weight: 100;
+				font-size: 1.2em;
+				text-shadow: 1px 1px 0px #B5231A;
+				letter-spacing: 0.3em;	
+	}
+
+
+		.post p {
+			margin-left: 3em;
+			font-family: 'Pacifico';
+			font-weight: 100;
+			font-size: 15px;
+			text-align: left;
+			color: #383838;
+
+		}
+
+
+		.post h2 {
+			width: 100%;
+			text-align: center;
+			color: #383838;
+			font-family: 'Pacifico', cursive;
+			font-weight: 100;
+			font-size: 1.2em;
+		}
+
+		.steps h3{
+			color: #383838;
+			font-family: 'Pacifico', cursive;
+			font-weight: 100;
+			font-size: 1.2em;
+		}
+
+		.steps {
+			background-color: red;
+			    margin-top: 2em;
+
+		}
+			.step img {
+				margin-top: 0.8em;
+				background-color: blue;
+			}
+			.step {
+			    width: 25%;
+			    display: inline-block;
+			    text-align: center;
+			    background-color: yellow;
+			}
+			.arrow {
+				text-align: center;
+				margin-top: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 10%;
+				display: inline-block;
+				background-color: green;
+			}
+
+
+#footer {
+	margin-top: 10em;
+	bottom: 0;
+	border-top: 3px solid rgb(181, 35, 26);
+	opacity: 0.7;
+	padding-right: 2em;
+	padding-bottom: 0.5em;
+}
+	#footer p {
+		font-weight: 100;
+		font-size: 16px;
+		font-family: 'Pacifico';
+		text-align: right;
+		color: #383838;
+	}
+	
+	
+	.sign-in {
+		width: 80%;
+		margin-top: 3em;
+		margin-bottom: 2em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+		
+		.sign-in h2{
+			display: inline-block;
+			text-decoration: none;
+			color: #C9271D;
+			font-family: 'Pacifico', cursive;
+			font-weight: 300;
+			font-size: 1.6em;
+			text-shadow: 1px 1px 0px  #B5231A;
+			letter-spacing: 0.02em;	
+			margin-left: 0em;
+		}	
+		.sign-in form{
+			margin-left: 1em;
+		}	
+		.sign-in div{
+			margin-bottom: 0.5em;
+		}	
+		.sign-in label{
+			margin-right: 0.5em;
+		}	
+		.sign-in a{
+			margin-right: 1em;
+				color: #C9271D;
+		}
+
+

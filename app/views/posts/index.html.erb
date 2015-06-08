@@ -1,0 +1,21 @@
+<div class="post">
+  <% p = Post.all %>
+  
+  <% if p.empty? %>
+    <div class="heading">
+      <h1>You still didn't write anything...</h1>
+    </div>
+  <% else %>
+    <%= p.each do |po| %>
+      <div class="heading">
+  	  				<h1><%= po.title %></h1>
+  	  				<h3>Date.</h3>
+  	  </div>
+      <div class="text">
+        <%= po.body %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<br>

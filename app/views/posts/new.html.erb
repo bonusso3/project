@@ -1,0 +1,13 @@
+<div class="post">
+  <div class="heading">
+    <h1>Create post:</h1>
+  </div>
+  <div class="text">
+  	  	<%= form_for(@post) do |f| %>
+			<p><%= f.label :title, 'Title: ' %><%= f.text_area :title %></p>
+			<p><%= f.label :body, 'Body: ' %><%= f.text_area :body %></p>
+			<%= f.submit :class => 'btn btn-primary' %>
+		<% end %>
+  </div>
+
+<br>

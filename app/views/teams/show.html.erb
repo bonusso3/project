@@ -1,0 +1,62 @@
+<p>
+  <strong>Team:</strong>
+  <%= @team.name %>
+</p>
+<p>
+  <strong>User:</strong>
+  <%= @team.user %>
+</p>
+
+<%= link_to 'Edit', edit_team_path(@team) %>
+
+<h2>List of players:</h2>
+
+<% if @team.players.empty? %>
+  No Players Found
+
+<% else %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Number</th>
+    <th colspan="0"></th>
+  </tr>
+
+  <% @team.players.each do |player| %>
+    <tr>
+      <td><%= player.name %></td>
+      <td><%= player.position %></td>
+      <td><%= player.number %></td>
+      <td><%#= link_to 'Edit', edit_team_player_path %></td>
+    </tr>
+  <% end %>
+</table>
+
+<% end %>
+
+
+<h2>Add a new player:</h2>
+
+<%= form_for([@team, @team.players.build]) do |f| %>
+  <p>
+    <%= f.label :'Name:' %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :'Position:' %><br>
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :'Number:' %><br>
+    <%= f.number_field :number %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+<%= link_to 'Add Player', new_team_player_path(@team) %>
+
+<%= link_to 'Back', teams_path %>
